@@ -1,4 +1,4 @@
-/* ================== MAIN CONTAINER ================== */
+
 .about-container {
   width: 100%;
   padding: 60px 8%;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* ================== ABOUT MAIN SECTION ================== */
+
 .about-main {
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* ================== CHEF SECTION ================== */
+
 .chef-section {
   text-align: center;
   margin-bottom: 90px;
@@ -100,7 +100,6 @@
   color: #555;
 }
 
-/* ================== WHY US SECTION ================== */
 .why-us {
   text-align: center;
   margin-bottom: 90px;
@@ -141,7 +140,7 @@
   font-size: 1.05rem;
 }
 
-/* ================== MISSION SECTION ================== */
+
 .mission-section {
   text-align: center;
   margin-bottom: 90px;
@@ -164,7 +163,7 @@
   line-height: 1.7rem;
 }
 
-/* ================== HIGHLIGHTS ================== */
+
 .highlights {
   display: flex;
   justify-content: space-between;
@@ -199,7 +198,7 @@
   color: #444;
 }
 
-/* ================== RESPONSIVE ================== */
+
 @media (max-width: 900px) {
   .about-main {
     flex-direction: column-reverse;
