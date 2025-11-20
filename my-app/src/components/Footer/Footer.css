@@ -1,4 +1,4 @@
-/* REMOVE ANY DEFAULT SPACING */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,15 +10,15 @@ footer, .footer, .footer-container {
   padding: 0;
 }
 
-/* FOOTER MAIN WRAPPER */
+
 .footer {
   background: #fff8f0;
   padding: 40px 20px 20px;
   color: #333;
-  margin-top: 0; /* prevents gap */
+  margin-top: 0; 
 }
 
-/* FOOTER CONTENT LAYOUT */
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -29,7 +29,6 @@ footer, .footer, .footer-container {
   margin: auto;
 }
 
-/* LOGO SECTION */
 .footer-logo {
   font-size: 2rem;
   font-weight: bold;
@@ -42,21 +41,21 @@ footer, .footer, .footer-container {
   color: #555;
 }
 
-/* SECTIONS */
+
 .footer-section,
 .footer-sections {
   flex: 1;
   min-width: 200px;
 }
 
-/* TITLES */
+
 .footer-title {
   margin-bottom: 12px;
   font-size: 1.4rem;
   color: #ff6347;
 }
 
-/* LINKS */
+
 .footer-links {
   list-style: none;
 }
@@ -76,14 +75,14 @@ footer, .footer, .footer-container {
   color: #ff6347;
 }
 
-/* CONTACT AREA */
+
 .footer-section p {
   margin-bottom: 8px;
   font-size: 1rem;
   color: #555;
 }
 
-/* SOCIAL ICONS */
+
 .social-icons {
   display: flex;
   gap: 12px;
@@ -100,7 +99,7 @@ footer, .footer, .footer-container {
   color: #ff6347;
 }
 
-/* BOTTOM BAR */
+
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
