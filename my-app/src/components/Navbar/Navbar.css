@@ -1,0 +1,72 @@
+/* REMOVE DEFAULT PAGE GAPS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR WRAPPER */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: #fff8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: fixed;   /* stays on top */
+  top: 0;
+  left: 0;
+  z-index: 1000;     /* ensures hero image goes behind */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6347;
+  letter-spacing: 1px;
+}
+
+/* LINKS WRAPPER */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+/* LINKS */
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  background: #ff6347;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white !important;
+  font-weight: 500;
+}
+
+.login-btn:hover {
+  background: #ff2e00;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-logo {
+    font-size: 1.4rem;
+  }
+}
