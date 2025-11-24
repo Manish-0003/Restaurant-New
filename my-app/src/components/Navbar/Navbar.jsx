@@ -41,6 +41,11 @@ const Navbar = () => {
             Gallery
           </Link>
         </li>
+         <li>
+          <Link to="/menu" onClick={closeMenu}>
+            Menu
+          </Link>
+        </li>
         <li>
           <Link to="/cart" onClick={closeMenu}>
             Cart
