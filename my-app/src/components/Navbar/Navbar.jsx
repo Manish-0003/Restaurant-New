@@ -14,6 +14,7 @@ const Navbar = () => {
   };
   const { cart } = useContext(CartContext);
   const cartCount = cart.reduce((total, item) => total + item.qty, 0);
+  
 
   return (
     <>
@@ -49,7 +50,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/cart"  className="cart-icon" onClick={closeMenu}><span>{cartCount}</span>
+            <Link to="/cart" className="cart-icon" onClick={closeMenu}>
+              <span>{cartCount}</span>
               Cart
             </Link>
           </li>

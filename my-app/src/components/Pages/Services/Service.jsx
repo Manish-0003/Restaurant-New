@@ -2,6 +2,8 @@ import React from "react";
 import "./Service.css";
 import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
+import { MdOutlineFoodBank } from "react-icons/md";
+
 
 const Service = () => {
   return (
@@ -18,7 +20,7 @@ const Service = () => {
 
         <div className="services-grid">
           <div className="service-card">
-            <img src="/images/dinein.jpg" alt="Dine-In" />
+           <img src="" alt="dine-in" />
             <h3>Dine-In Experience</h3>
             <p>
               Enjoy a warm and cozy dine-in experience with premium hospitality.
@@ -26,25 +28,25 @@ const Service = () => {
           </div>
 
           <div className="service-card">
-            <img src="/images/delivery.jpg" alt="Delivery" />
+            <img src="" alt="Delivery" />
             <h3>Fast Home Delivery</h3>
             <p>Hot, fresh, and fast food delivered right to your doorstep.</p>
           </div>
 
           <div className="service-card">
-            <img src="/images/reservation.jpg" alt="Reservation" />
+            <img src="" alt="Reservation" />
             <h3>Online Table Reservation</h3>
             <p>Book your table online and avoid the waiting time.</p>
           </div>
 
           <div className="service-card">
-            <img src="/images/catering.jpg" alt="Catering" />
+            <img src=" " alt="Catering" />
             <h3>Catering Services</h3>
             <p>Perfect catering for weddings, parties, and corporate events.</p>
           </div>
 
           <div className="service-card">
-            <img src="/images/events.jpg" alt="Events" />
+            <img src=" " alt="Events" />
             <h3>Event Hosting</h3>
             <p>
               We host birthday parties, anniversaries, and small gatherings.
@@ -52,7 +54,7 @@ const Service = () => {
           </div>
 
           <div className="service-card">
-            <img src="/images/takeaway.jpg" alt="Takeaway" />
+            <img src="" alt="Takeaway" />
             <h3>Easy Takeaway</h3>
             <p>Quick takeaway service for customers on the go.</p>
           </div>

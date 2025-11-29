@@ -1,57 +1,82 @@
 import React, { useState } from "react";
-import "./Login.css";
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
+import "./Login.css";
 import { useNavigate } from "react-router";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../../../firebase";
 
 const Login = () => {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
   const navigate = useNavigate();
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
 
-  const handleChange = (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value });
-  };
-  const handleLogin = () => {
-    if (!form.email || !form.password) {
-      alert("Enter all fields");
-      return;
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, form.email, form.password);
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
     }
+  };
 
-    alert("Login Successful!");
-    navigate("/");
+  const handleGoogleLogin = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
     <>
       <Navbar />
+      <div className="login-container">
+        <div className="login-box">
+          <h2>Login to Account</h2>
 
-      <div className="auth-container">
-        <div className="auth-box">
-          <h2>Login</h2>
+          {error && <p className="error-msg">{error}</p>}
+
           <input
             type="email"
-            placeholder="Email"
-            name="email"
+            placeholder="Enter Your Email"
             value={form.email}
-            onChange={handleChange}
+            onChange={(e) =>
+              setForm({ ...form, email: e.target.value })
+            }
           />
+
           <input
             type="password"
-            placeholder="Enter Password"
-            name="password"
+            placeholder="Enter Your Password"
             value={form.password}
-            onChange={handleLogin}
+            onChange={(e) =>
+              setForm({ ...form, password: e.target.value })
+            }
           />
-          <button>Login</button>
-          <p className="switch-text">
-            New User ?{" "}
-            <span onClick={() => navigate("/signup")}>Create New Account</span>
+
+          <button className="login-btn" onClick={handleLogin}>
+            Login
+          </button>
+
+          <div className="divider">OR</div>
+
+          <button className="google-btn" onClick={handleGoogleLogin}>
+            <img
+              src="https://developers.google.com/identity/images/g-logo.png"
+              alt="Google"
+            />
+            Login with Google
+          </button>
+
+          <p className="signup-link">
+            Don't have an account?{" "}
+            <span onClick={() => navigate("/signup")}>Signup</span>
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

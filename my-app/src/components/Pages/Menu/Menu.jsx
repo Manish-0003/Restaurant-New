@@ -36,7 +36,7 @@ const Menu = () => {
       <Navbar />
       <div className="menu-container">
         <div className="cart-badge">
-          Cart Items : <span>{cart.length}</span>
+          
         </div>
         <h2 className="menu-title">Our Menu</h2>
 
